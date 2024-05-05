@@ -1,0 +1,22 @@
+
+
+<p> Meu nome é {{name}}</p>
+<p>Idade: {{age}}</p>
+
+
+<p>Marca: {{car.marca}}</p>
+<p>Modelo: {{car.modelo}}</p>
+
+<ul>
+    <li *ngFor="let item of hobbies">
+        {{item}}
+    </li>
+</ul>
+
+<ul>
+    @for(item of hobbies; track $index){
+        <li>{{item}}</li>
+    }
+</ul>
+
+<img src="{{img}}" alt="angular 17" />
