@@ -1,0 +1,27 @@
+<p>control-flow works!</p>
+
+
+<h3>Angular 16 ou menor</h3>
+
+<div *ngIf="mostrar">
+    <h3>Olá Angular</h3>
+</div>
+
+<h2>Condicional Else</h2>
+
+<div *ngIf="color === 'green'; else elseBlock">
+    <h2>Cor é verde</h2>
+</div>
+<ng-template #elseBlock>
+    <h2>Cor não é verde</h2>
+</ng-template>
+
+<h2>Angular 17 - Control flow</h2>
+
+@if(color == "green"){
+    <p>Cor verde</p>
+}@else {
+    <p>Não é verde</p>
+}
+
+
