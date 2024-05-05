@@ -16,6 +16,6 @@ export class FirstComponentComponent {
   hobbies = ["futebol", "bike", "músicas"]
   car = {marca: "Ford", modelo:"fiesta"}
   img = '../../assets/img/angular.jpg'  
-
+  isDisabled = true;
 
 }
