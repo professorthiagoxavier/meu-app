@@ -1,0 +1,19 @@
+<h2> Diretiva class</h2>
+
+<p [ngClass]="{'errorClass': hasError}">Thiago Xavier</p>
+
+<input type="button" (click)="toggleError()" value="Alternar" />
+
+<h2> Diretiva style</h2>
+
+<p [ngStyle]="{'background-color' : color, 'font-size': font + 'px', 'color': colorFont}">Estilo inline</p>
+
+
+<h2> Diretiva NgModel</h2>
+
+<label for="example-ngModel">[(ngModel)]:</label>
+<input [(ngModel)]="item.nome" />
+
+<p>Campo alterado: {{item.nome}}</p>
+
+<p>UpperCase: <input type="text" [ngModel]="item.nome" (ngModelChange)="setUpperCase($event)" /></p>

@@ -18,9 +18,9 @@
 <h2>Angular 17 - Control flow</h2>
 
 @if(color == "green"){
-    <p>Cor verde</p>
+<p>Cor verde</p>
 }@else {
-    <p>Não é verde</p>
+<p>Não é verde</p>
 }
 
 
@@ -28,14 +28,45 @@
 
 <ul>
     @for(item of esportes; track $index){
-        <li>{{item}}</li>
+    <li>{{item}}</li>
     }
 </ul>
 
 <ul>
     @for(carro of carros; track $index){
-        <li>{{carro}}</li>
+    <li>{{carro}}</li>
     }@empty {
-        <li>Não temos carros cadastrados</li>
+    <li>Não temos carros cadastrados</li>
     }
 </ul>
+
+<h2>Control flow - NgSwitch</h2>
+
+<label for="selector">Select a value:</label>
+<select id="selector" (change)="changeValue($event)">
+    <option value="one">One</option>
+    <option value="two">Two</option>
+    <option value="three">Three</option>
+    <option value="other">Other</option>
+</select>
+
+<div [ngSwitch]="selectedValue">
+    <p *ngSwitchCase="'one'">1</p>
+    <p *ngSwitchCase="'two'">2</p>
+    <p *ngSwitchCase="'three'">3</p>
+    <p *ngSwitchDefault>Outro</p>
+</div>
+
+<h2>Control flow switch</h2>
+
+@switch (mes) {
+    @case(1){
+        <p>Janeiro</p>
+    }
+    @case(3){
+        <p>Março</p>
+    }
+    @default{
+        <p>Mês incorreto </p>
+    }
+}

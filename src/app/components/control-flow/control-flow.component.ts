@@ -10,12 +10,21 @@ import { Component } from '@angular/core';
 })
 export class ControlFlowComponent {
 
-  mostrar:boolean = true
-  color:string = "red"
+  mostrar: boolean = true
+  color: string = "red"
   esportes = ["futebol", "basquete", "volei"]
   carros = []
+  selectedValue: string = 'one';
 
-  constructor(){
+  mes = 3;
+
+  changeValue(event: Event) {
+    const selectElement = event.target as HTMLSelectElement
+
+    this.selectedValue = selectElement.value;
+  }
+
+  constructor() {
 
   }
 
