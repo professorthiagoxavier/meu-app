@@ -12,6 +12,8 @@ export class ControlFlowComponent {
 
   mostrar:boolean = true
   color:string = "red"
+  esportes = ["futebol", "basquete", "volei"]
+  carros = []
 
   constructor(){
 

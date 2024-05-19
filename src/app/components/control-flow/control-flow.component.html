@@ -24,3 +24,18 @@
 }
 
 
+<h2>Control flow - For</h2>
+
+<ul>
+    @for(item of esportes; track $index){
+        <li>{{item}}</li>
+    }
+</ul>
+
+<ul>
+    @for(carro of carros; track $index){
+        <li>{{carro}}</li>
+    }@empty {
+        <li>Não temos carros cadastrados</li>
+    }
+</ul>
